@@ -32,6 +32,7 @@ function timeColor() {
       $(this).removeClass('present');
       $(this).addClass('future'); 
       /*Using 'if' 'then' I added and removed the classes from the time blocks based on the time of day*/
+      /*Was not working, but I was sure my code was correct. turns out my integers in my HTML were not in military time*/
     }
   });
 
