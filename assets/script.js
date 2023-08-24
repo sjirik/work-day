@@ -21,7 +21,21 @@ function timeColor() {
 
   $('.time-block').each(function () {
     var timeOfBlock = parseInt($(this).attr('id').split('-')[1]) /*this is going to loop my function over all of my time blocks*/
-})
+
+    if (timeOfBlock < timeOfDay) {
+      $(this).addClass('past');
+    } else if (timeOfBlock === timeOfDay) {
+      $(this).removeClass('past');
+      $(this).addClass('present');
+    } else {
+      $(this).removeClass('past');
+      $(this).removeClass('present');
+      $(this).addClass('future'); 
+      /*Using 'if' 'then' I added and removed the classes from the time blocks based on the time of day*/
+    }
+  });
+
+}
 
 timeColor();
 
